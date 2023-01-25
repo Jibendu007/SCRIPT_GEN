@@ -1,0 +1,21 @@
+<TransportContextList>
+    <!-- Non Batch 2ASYNC 2 SYNC 1 FIREANDFORGOT Interface-->
+    <!--A.Input Transport-->
+    <TransportContext>
+        <TenantId>DEMOTENANT</TenantId>
+        <Id>NONBATCHTRANSPORT</Id>
+        <NttyStsCd>ACTIVE</NttyStsCd>
+        <FctvFr>2022-10-13T11:34:27.548</FctvFr>
+        <TrnsprtId>NONBATCHTRANSPORT</TrnsprtId>
+        <TrnsprtTp>ROUTE</TrnsprtTp>
+        <Scp>Processor</Scp>
+        <Ctgy>EXTERNAL</Ctgy>
+        <TrnsprtCfgtn><![CDATA[
+         <from uri="amqprabbit:nonbatchin?exchangeType=direct&amp;autoAck=false&amp;autoDelete=false&amp;prefetchCount={{PREFETCH_COUNT}}&amp;prefetchEnabled=true&amp;prefetchGlobal=false&amp;topologyRecoveryEnabled={{ENABLE_RABBIT_TOPOLOGY_RECOVERY}}&amp;automaticRecoveryEnabled={{ENABLE_RABBIT_AUTO_RECOVERY}}&amp;concurrentConsumers={{NONBATCHIN_CCOUNT}}&amp;threadPoolSize={{NONBATCHIN_CCOUNT}}&amp;routingKey=nonbatchin&amp;queue=nonbatchin" />
+                <setHeader headerName="TrnsprtCd">
+                  <constant>NONBATCHTRANSPORT</constant>
+                </setHeader>
+         <to uri="volante:CallInstructionReceiver2" />
+      ]]></TrnsprtCfgtn>
+    </TransportContext>
+</TransportContextList>

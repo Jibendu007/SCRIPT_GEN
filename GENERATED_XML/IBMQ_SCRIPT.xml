@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TransportContextList>
+    <TransportContext>
+        <TenantId>DEMO</TenantId>
+        <Id>NONBATCHTRANSPORT</Id>
+        <NttyStsCd>ACTIVE</NttyStsCd>
+        <FctvFr>2022-10-13T11:34:27.548</FctvFr>
+        <TrnsprtId>NONBATCHTRANSPORT</TrnsprtId>
+        <TrnsprtTp>ROUTE</TrnsprtTp>
+        <Scp>Processor</Scp>
+        <Ctgy>EXTERNAL</Ctgy>
+        <TrnsprtCfgtn>
+            <![CDATA[<from uri=jms:"nonbatchin?concurrentConsumers={{NONBATCHIN_CCOUNT}}&amp;acknowledgementModeName=AUTO_ACKNOWLEDGE"/><setHeader headerName="TrnsprtCd"><constant>NONBATCHTRANSPORT</constant></setHeader><to uri="volante:CallInstructionReceiver2" /]]>
+        </TrnsprtCfgtn>
+    </TransportContext>
+</TransportContextList>

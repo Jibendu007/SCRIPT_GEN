@@ -1,0 +1,13 @@
+TenantId=DEMOTENANT
+Id=NONBATCHTRANSPORT
+NttyStsCd=ACTIVE
+FctvFr=2022-10-13T11:34:27.548
+TrnsprtId=NONBATCHTRANSPORT
+TrnsprtTp=ROUTE
+Scp=Processor
+Ctgy=EXTERNAL
+headerName=TrnsprtCd
+cknowledgementModeName=AUTO
+exchangeType=direct
+topologyRecoveryEnabled=enable
+automaticRecoveryEnabled=disable
