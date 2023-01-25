@@ -125,7 +125,6 @@ public class CreateXMLFileJava {
                 /*----------------------IBMQ--------------------------------------------
                 * ----------------------IBMQ--------------------------------------------*/
 
-
                 DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
                 Document document = documentBuilder.newDocument();
@@ -179,12 +178,8 @@ public class CreateXMLFileJava {
                 StreamResult streamResult = new StreamResult(new File(IBMQ));
                 transformer.transform(domSource, streamResult);
 
-
-
                 /*--------------------------------------------RABBITMQ------------------------------------------------
                 ----------------------------------------------RABBITMQ------------------------------------------------*/
-
-
                 DocumentBuilderFactory documentFactory_ra = DocumentBuilderFactory.newInstance();
                 DocumentBuilder documentBuilder_ra = documentFactory_ra.newDocumentBuilder();
                 Document document_ra = documentBuilder_ra.newDocument();
@@ -241,9 +236,7 @@ public class CreateXMLFileJava {
                 StreamResult streamResult_ra = new StreamResult(new File(RABBITMQ));
                 transformer_ra.transform(domSource_ra, streamResult_ra);
 
-
-                    System.out.println("Done creating   XML FileS");
-
+                System.out.println("Done creating   XML FileS");
 
             } catch (ParserConfigurationException pce) {
                 pce.printStackTrace();
